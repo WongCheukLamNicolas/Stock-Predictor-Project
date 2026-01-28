@@ -1,8 +1,9 @@
 # Stock-Predictor-Project
-Project Overview
+
+#Project Overview
 This project implements and compares multiple deep learning models for stock price prediction using various neural network architectures and optimization algorithms. The system predicts stock prices using historical data and evaluates performance across different optimizers and model architectures.
 
-Models Implemented
+#Models Implemented
 1. LSTM Models
 Adamax Optimizer (Adamax.py): LSTM with Adamax optimizer (3 LSTM layers, 100 units each)
 SGD Optimizer (SGD_optimizer.py): LSTM with Stochastic Gradient Descent optimizer
@@ -18,18 +19,18 @@ SGD optimizer
 Comprehensive RNN implementation with extensive parameter tuning
 Tests multiple configurations across different stocks
 
-Key Features
+#Key Features
 Data Processing
 Data Source: Yahoo Finance (yfinance API)
 
-Stocks Analyzed:
+#Stocks Analyzed:
 AAPL (Apple Inc.)
 9843.T (Nitori Holdings Co Ltd - Japan Home Furnishings)
 Multiple other stocks in the RNN implementation
 Time Period: 2020-01-01 to 2024-12-31
 Preprocessing: MinMax normalization, train-test split (80-20)
 
-Evaluation Metrics
+#Evaluation Metrics
 Standard Metrics: RMSE, MAE
 Success Rate Metrics:
 Direction Prediction Accuracy (Up/Down)
@@ -38,13 +39,13 @@ Predictions within 5% of the actual price
 Trading Simulation Returns
 Overall Success Score: Weighted average of direction, percentage, and trend accuracy
 
-Advanced Analysis
+#Advanced Analysis
 Trading simulation with profit/loss calculation
 Window-based best success rate analysis
 Multiple random seed runs for statistical significance
 Parameter grid search (lookback periods, hidden sizes, epochs)
 
-Model Architectures
+#Model Architectures
 LSTM Architecture (Adamax/SGD)
 Input → LSTM(100) → Dropout(0.2) → LSTM(100) → Dropout(0.2) → LSTM(100) → Dropout(0.2) → Dense(1)
 
@@ -57,17 +58,17 @@ Input → SimpleRNN(hidden_size) → SimpleRNN(hidden_size) → Dense(1)
 Performance Comparison
 The project compares the performance of different optimizers across metrics:
 
-Optimizers Tested:
+#Optimizers Tested:
 Adamax: Adaptive learning rate, momentum-based
 SGD: Stochastic Gradient Descent with momentum
 FTRL: Follow-The-Regularized-Leader (typically for sparse data)
 
-Key Findings:
+#Key Findings:
 Each optimizer shows different strengths in RMSE vs. success rate
 Best performance varies by stock and time period
 Trading simulation results show practical profitability
 
- References
+#References
 Yahoo Finance API (yfinance)
 TensorFlow/Keras for deep learning implementation
 Scikit-learn for preprocessing and metrics
